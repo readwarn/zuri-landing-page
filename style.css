@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    background: black;
+    padding-bottom:30px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    padding: 10px;
+}
+nav{
+    display: flex;
+    align-items: center;
+}
+nav button{
+    border: 1.2px solid #3592CE;
+    border-radius: 0.25rem;
+    background: transparent;
+    outline: 0;
+    text-align: center;
+    padding: 5px 15px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+nav button:hover{
+    color: #FFFFFF;
+    background: #3592CE;
+    border: 1px solid #FFFFFF;
+}
+nav img.logo{
+    width:200px;
+    display: block;
+    margin: auto;
+}
+nav img.toggler{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+div.links {
+    display: none;
+}
+div.links a{
+    color: #FFFFFF;
+    font-size: 0.8rem;
+}
+aside.links{
+    transform: translateX(-100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    background: #FFFFFF;
+    z-index: 99;
+}
+aside.links.show{
+    transform: translateX(0);
+    transition: transform ease-in-out 0.4s;
+}
+aside.links div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1.5px solid #3592CE;
+    margin-bottom: 5px;
+    padding: 10px 0;
+}
+aside.links a {
+    color: black;
+    font-size: 1rem;
+    display: block;
+    padding: 12px;
+    width: 90%;
+}
+aside.links a:hover{
+    background-color: rgb(215, 233, 235);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-decoration: 0;
+}
+aside.links img.logo{
+    width: 180px;
+}
+aside.links img.close{
+    cursor: pointer;
+}
+a{
+    text-decoration: 0;
+}
+a:hover{
+    text-decoration: underline;
+}
+main{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    padding: 0 10px;
+    position: relative;
+}
+form.login{
+    position: absolute;
+    width: 92%;
+    margin: auto;
+    display: none;
+}
+form.login h1{
+    margin-bottom: 20px;
+    font-size: 1.7rem;
+    text-align: center;
+}
+section.a{
+   display: none;
+}
+section.b{
+    width: 95%;
+}
+section.a h1{
+    width: 60%;
+}
+section.b h3{
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+form.signup label {
+    margin-bottom: 7px;
+    font-size: 0.9rem;
+    display: block;
+}
+form div.input-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 38px;
+    padding: 0 10px;
+    background-color: #FFFFFF;
+    border-radius: 0.25rem;
+    margin-bottom: 25px;
+}
+form div.input-box.pass{
+    margin-bottom: 10px;
+}
+form div.input-box input{
+    outline: 0;
+    border: 0;
+    height: 100%;
+    width: 92%;
+}
+form a.pass{
+    color: #3592CE;
+    font-size: 0.8rem;
+    display: block;
+    text-align: center;
+}
+form button{
+    display: block;
+    background: #3592CE;
+    color: #FFFFFF;
+    width: 200px;
+    margin: 15px auto;
+    padding: 10px;
+    text-align: center;
+    outline: 0;
+    border: transparent 1.3px solid;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+form button:hover{
+    background: #FFFFFF;
+    border: #3592CE 1.3px solid;
+    color: #3592CE;
+}
+form p {
+    font-size: 0.9rem;
+    text-align: center;
+    margin: 25px 0;
+}
+form p a{
+    color: #3592CE;
+}
+
+@media screen and (min-width:720px) {
+    header{
+        padding: 0 25px;
+    }
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    nav img.logo{
+        width:250px;
+        margin: 0;
+    }
+    nav img.toggler{
+        display: none;
+    }
+    aside.links.show{
+        transform: translateX(-100%);
+    }
+    div.links {
+        width: 340px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    main{
+        padding: 0 17px;
+    }
+    form.login{
+        width: 60%;
+    }
+    section.a{
+        width: 45%;
+        margin-right: 2%;
+        display: block;
+    }
+    section.a.hide{
+        display: none;
+    }
+    section.a img.onboard{
+        width: 270px;
+        margin: 20px 0;
+    }
+    section.a h1{
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+        text-transform: capitalize;
+    }
+    section.a p{
+        font-size: 0.8rem;
+    }
+    section.b {
+        width: 53%;
+    }
+    form label{
+        font-size: 0.75rem;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    main{
+        padding: 0 25px;
+    }
+    form.login{
+        width: 40%;
+    }
+    section.a{
+        width: 49%;
+        margin-right: 2%;
+        display: block;
+    }
+    section.a img.onboard{
+        width: 350px;
+        margin: 20px 0;
+    }
+    section.a h1{
+        font-size: 1.7rem;
+    }
+    section.a p{
+        font-size: 0.9rem;
+    }
+    section.b {
+        width: 49%;
+    }
+    form label{
+        font-size: 0.85rem;
+    }
+}
